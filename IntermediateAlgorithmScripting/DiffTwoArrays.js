@@ -2,6 +2,7 @@
 //with any items only found in one of the two given arrays, 
 //but not both. In other words, return the symmetric 
 //difference of the two arrays.
+//Link to solution: https://forum.freecodecamp.org/t/freecodecamp-algorithm-challenge-guide-diff-two-arrays/16008
 
 function diffArray(arr1, arr2) {
 	var newArr = [];
