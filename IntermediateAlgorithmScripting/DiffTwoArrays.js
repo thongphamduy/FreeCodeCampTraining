@@ -4,20 +4,19 @@
 //difference of the two arrays.
 
 function diffArray(arr1, arr2) {
-  var newArr = [];
-  var newArr1=[]
-  var newArr2=[]
+	var newArr = [];
 
-  for(var i=0;i<arr1.length;i++){
-  	var i2=arr2.indexOf(arr1[i])
-  	if(i2 !== -1){
-  		newArr1.push(arr1.slice(i, i+1))
-  		newArr2.push(arr2.slice(i2, i2+1))
-  	}
-  }  
-  newArr=newArr2.concat(newArr1)
-  console.log(newArr)
-  return newArr;
+	var tempArr=arr1.concat(arr2)
+	var tempArr2=[]
+	for(var i=0; i<tempArr.length;i++){
+		if(!newArr.includes(tempArr[i])){
+			newArr.push(tempArr[i])
+		} else {
+			newArr=newArr.filter(item=>item !== tempArr[i])
+		}
+	}
+	console.log(newArr)
+	return newArr;
 }
 
-diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5]);
+diffArray([1, "calf", 3, "piglet"],[1, "calf", 3, 4]);

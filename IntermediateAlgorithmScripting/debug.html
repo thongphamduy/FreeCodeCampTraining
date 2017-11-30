@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script>
+	function diffArray(arr1, arr2) {
+	var newArr = [];
+
+	var tempArr=arr1.concat(arr2)
+	var tempArr2=[]
+	for(var i=0; i<tempArr.length;i++){
+		if(!newArr.includes(tempArr[i])){
+			newArr.push(tempArr[i])
+		} else {
+			newArr=newArr.filter(item=>item !== tempArr[i])
+		}
+	}
+	console.log(newArr)
+	return newArr;
+}
+
+diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5]);	
+</script>
+</body>
+</html>
