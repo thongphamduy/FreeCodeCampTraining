@@ -10,7 +10,6 @@ function convertToRoman(num) {
 		var thuong=Math.floor(num/roman[i])
 		arr.push(thuong)
 		num=num%roman[i]
-		console.log(num)
 	}
 	console.log(arr)
 	for(var i=0;i<arr.length;i++){
