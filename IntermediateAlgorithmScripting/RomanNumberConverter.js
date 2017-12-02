@@ -1,10 +1,3 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title></title>
-</head>
-<body>
-<script>
 	function convertToRoman(num) {
 	var roman=[]
 	var x=num
@@ -24,7 +17,4 @@
  	return roman.join("");
 }
 
-console.log(convertToRoman(36))	
-</script>
-</body>
-</html>
+console.log(convertToRoman(3999))	
