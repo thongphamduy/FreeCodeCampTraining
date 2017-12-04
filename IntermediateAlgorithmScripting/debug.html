@@ -5,23 +5,23 @@
 </head>
 <body>
 <script>
-	function diffArray(arr1, arr2) {
-	var newArr = [];
-
-	var tempArr=arr1.concat(arr2)
-	var tempArr2=[]
-	for(var i=0; i<tempArr.length;i++){
-		if(!newArr.includes(tempArr[i])){
-			newArr.push(tempArr[i])
-		} else {
-			newArr=newArr.filter(item=>item !== tempArr[i])
+	function convertToRoman(num) {
+	var roman=[]
+	var x=num
+	var value=[1,4,5,9,10,40,50,90,100,400,500,900,1000]
+	var symbol=["I","IV","V","IX","X","XL","L","LC","C","CD","D","CM","M"]
+	for(var i=value.length-1;i>=0;i--){
+	
+		while (num-value[i]>0) {
+			roman.push(symbol[i])
+			num=num-value[i]
 		}
 	}
-	console.log(newArr)
-	return newArr;
+
+ 	return roman.join("");
 }
 
-diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5]);	
+console.log(convertToRoman(3999))	
 </script>
 </body>
 </html>

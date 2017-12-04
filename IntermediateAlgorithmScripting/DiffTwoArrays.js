@@ -8,7 +8,6 @@ function diffArray(arr1, arr2) {
 	var newArr = [];
 
 	var tempArr=arr1.concat(arr2)
-	var tempArr2=[]
 	for(var i=0; i<tempArr.length;i++){
 		if(!newArr.includes(tempArr[i])){
 			newArr.push(tempArr[i])
@@ -20,4 +19,4 @@ function diffArray(arr1, arr2) {
 	return newArr;
 }
 
-diffArray([1, "calf", 3, "piglet"],[1, "calf", 3, 4]);
+diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5]);
