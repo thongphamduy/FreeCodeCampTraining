@@ -17,4 +17,4 @@ return result
 }
 
 //var a=sumAll([10, 4]);
-console.log(sumAll([10, 4]))
+console.log(sumAll([11, 4]))
