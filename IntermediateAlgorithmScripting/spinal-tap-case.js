@@ -1,11 +1,6 @@
 function spinalCase(str) {
-  let spinal = str.replace(/[^A-Za-z]/g,'-').split("")
-  for(let i=1;i<=spinal.length-1;i++){
-  	if(spinal[i] !== '-' && /[A-Z]/.test(spinal[i+1])){
-  		spinal.splice(i+1,0,'-')
-  	}
-  }
-  console.log(spinal.join("").toLowerCase())
+  let spinal = str.replace(/[^A-Za-z0-9]/g,'-').replace(/([a-z])([A-Z])/g,'$1-$2')
+  console.log(spinal.toLowerCase())
   return str;
 }
 
